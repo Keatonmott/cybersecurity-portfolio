@@ -1,0 +1,7 @@
+{
+  "resources": [
+    {"id": "reports-bucket", "type": "object_storage", "public_read": true},
+    {"id": "report-reader", "type": "iam_policy", "actions": ["*"], "resources": ["*"]},
+    {"id": "organization-audit", "type": "audit_logging", "enabled": false}
+  ]
+}

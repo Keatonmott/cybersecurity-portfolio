@@ -1,0 +1,39 @@
+{
+  "checks": [
+    {
+      "user": "alice",
+      "document": "doc-1",
+      "status": 200
+    },
+    {
+      "user": "bob",
+      "document": "doc-2",
+      "status": 200
+    },
+    {
+      "user": "alice",
+      "document": "doc-2",
+      "status": 404
+    },
+    {
+      "user": "bob",
+      "document": "doc-1",
+      "status": 404
+    },
+    {
+      "user": "alice",
+      "document": "missing",
+      "status": 404
+    },
+    {
+      "user": null,
+      "document": "doc-1",
+      "status": 401
+    },
+    {
+      "user": "unknown",
+      "document": "doc-1",
+      "status": 401
+    }
+  ]
+}

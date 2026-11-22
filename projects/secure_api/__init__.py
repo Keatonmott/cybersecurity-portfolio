@@ -1,0 +1,1 @@
+"""Object authorization case study."""

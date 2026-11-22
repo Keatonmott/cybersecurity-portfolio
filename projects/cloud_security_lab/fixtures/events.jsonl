@@ -1,0 +1,6 @@
+{"timestamp":"2026-01-10T10:00:00Z","actor":"automation","event":"CreateAccessKey","target_user":"service-reports","source_ip":"192.0.2.10","outcome":"success"}
+{"timestamp":"2026-01-10T10:02:00Z","actor":"automation","event":"AttachUserPolicy","target_user":"service-reports","policy":"AdministratorAccess","source_ip":"192.0.2.10","outcome":"success"}
+{"timestamp":"2026-01-10T11:00:00Z","actor":"admin","event":"CreateAccessKey","target_user":"service-backup","source_ip":"198.51.100.20","outcome":"success"}
+{"timestamp":"2026-01-10T11:03:00Z","actor":"admin","event":"AttachUserPolicy","target_user":"different-user","policy":"AdministratorAccess","source_ip":"198.51.100.20","outcome":"success"}
+{"timestamp":"2026-01-10T12:00:00Z","actor":"admin","event":"CreateAccessKey","target_user":"service-archive","source_ip":"198.51.100.20","outcome":"success"}
+{"timestamp":"2026-01-10T12:20:00Z","actor":"admin","event":"AttachUserPolicy","target_user":"service-archive","policy":"AdministratorAccess","source_ip":"198.51.100.20","outcome":"success"}

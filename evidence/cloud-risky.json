@@ -1,0 +1,26 @@
+{
+  "finding_count": 3,
+  "findings": [
+    {
+      "id": "CLOUD-001",
+      "severity": "high",
+      "resource": "reports-bucket",
+      "problem": "Object storage permits public reads.",
+      "remediation": "Block public access and review bucket and object policies."
+    },
+    {
+      "id": "CLOUD-002",
+      "severity": "high",
+      "resource": "report-reader",
+      "problem": "IAM policy contains a wildcard action or resource.",
+      "remediation": "Grant only required actions on named resources."
+    },
+    {
+      "id": "CLOUD-003",
+      "severity": "high",
+      "resource": "organization-audit",
+      "problem": "Audit logging is disabled or unconfirmed.",
+      "remediation": "Enable audit logging and protect its destination."
+    }
+  ]
+}

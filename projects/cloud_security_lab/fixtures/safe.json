@@ -1,0 +1,7 @@
+{
+  "resources": [
+    {"id": "reports-bucket", "type": "object_storage", "public_read": false},
+    {"id": "report-reader", "type": "iam_policy", "actions": ["s3:GetObject"], "resources": ["arn:aws:s3:::example-private-reports/*"]},
+    {"id": "organization-audit", "type": "audit_logging", "enabled": true}
+  ]
+}
