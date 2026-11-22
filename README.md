@@ -4,6 +4,10 @@
 
 Three Python labs examine cloud identity changes, document ownership, and trust in retrieved text. Each includes synthetic inputs, a working control, and the evidence behind its result. [Browse the evidence](evidence/README.md)
 
+**Start here for GitHub IAM.** A contractor leaves and an engineer changes teams. Review effective permissions on three private repositories, trace a direct grant and a team grant, and decide which ticket can close after the second review. [Work the GitHub access tickets](studies/iam-offboarding/README.md)
+
+**Next, review application access.** A retired reporting tool still has organization approval. A build service depends on its approval, and a third integration has no recorded owner. Decide what to retain, what to remove, and what needs investigation. [Work the OAuth review](studies/github-oauth-access/README.md) · [See the decisions](evidence/github-oauth-review.json)
+
 ## Two minutes to administrator access
 
 On January 10, the `automation` identity created an access key for a reporting account, then granted that account full administrative access. The cloud lab asks which changes an analyst should investigate.
@@ -36,7 +40,7 @@ python -m projects.cloud_security_lab.detect projects/cloud_security_lab/fixture
 
 Look for `IDENTITY-001` and its two source records in the JSON output. [Expected output](evidence/identity-alerts.json)
 
-Run the full regression suite and rebuild all five reports.
+Run the full regression suite and rebuild all six reports.
 
 ```sh
 python -m unittest discover -s tests -v

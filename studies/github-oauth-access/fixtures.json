@@ -1,0 +1,64 @@
+{
+  "organization": "example-workshop",
+  "applications": [
+    {
+      "app_id": "build-01",
+      "name": "Build Courier",
+      "ticket": "OAUTH-201",
+      "review_team": "Release Engineering",
+      "lifecycle": "active",
+      "owner": "Release Engineering",
+      "purpose": "Deliver build results for the private packaging repository."
+    },
+    {
+      "app_id": "reports-02",
+      "name": "Weekly Digest",
+      "ticket": "OAUTH-202",
+      "review_team": "Developer Experience",
+      "lifecycle": "retired",
+      "owner": "Developer Experience",
+      "purpose": "Previously compiled the weekly repository activity report."
+    },
+    {
+      "app_id": "sync-03",
+      "name": "Archive Bridge",
+      "ticket": "OAUTH-203",
+      "review_team": "Organization Security",
+      "lifecycle": "unknown",
+      "owner": null,
+      "purpose": null
+    }
+  ],
+  "snapshots": [
+    {
+      "as_of": "2026-01-12T09:00:00Z",
+      "window_start": "2026-01-12T08:45:00Z",
+      "restrictions_enabled": true,
+      "evidence_ref": "ORG-REVIEW-0900",
+      "complete": true,
+      "approvals": [
+        {"app_id": "build-01", "approved": true},
+        {"app_id": "reports-02", "approved": true},
+        {"app_id": "sync-03", "approved": true}
+      ],
+      "health_checks": [
+        {"app_id": "build-01", "checked_at": "2026-01-12T08:56:00Z", "passed": true}
+      ]
+    },
+    {
+      "as_of": "2026-01-12T11:00:00Z",
+      "window_start": "2026-01-12T10:45:00Z",
+      "restrictions_enabled": true,
+      "evidence_ref": "ORG-REVIEW-1100",
+      "complete": true,
+      "approvals": [
+        {"app_id": "build-01", "approved": true},
+        {"app_id": "reports-02", "approved": false},
+        {"app_id": "sync-03", "approved": true}
+      ],
+      "health_checks": [
+        {"app_id": "build-01", "checked_at": "2026-01-12T10:55:00Z", "passed": true}
+      ]
+    }
+  ]
+}

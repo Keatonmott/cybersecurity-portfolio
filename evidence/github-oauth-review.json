@@ -1,0 +1,109 @@
+{
+  "organization": "example-workshop",
+  "reviews": [
+    {
+      "as_of": "2026-01-12T09:00:00Z",
+      "window_start": "2026-01-12T08:45:00Z",
+      "evidence_ref": "ORG-REVIEW-0900",
+      "complete": true,
+      "restrictions_enabled": true,
+      "applications": [
+        {
+          "app_id": "build-01",
+          "application": "Build Courier",
+          "ticket": "OAUTH-201",
+          "owner": "Release Engineering",
+          "review_team": "Release Engineering",
+          "purpose": "Deliver build results for the private packaging repository.",
+          "lifecycle": "active",
+          "approved": true,
+          "health_check": {
+            "app_id": "build-01",
+            "checked_at": "2026-01-12T08:56:00Z",
+            "passed": true
+          },
+          "decision": "retain",
+          "next_action": "Keep the approval and file the successful build check with the owner's register entry."
+        },
+        {
+          "app_id": "reports-02",
+          "application": "Weekly Digest",
+          "ticket": "OAUTH-202",
+          "owner": "Developer Experience",
+          "review_team": "Developer Experience",
+          "purpose": "Previously compiled the weekly repository activity report.",
+          "lifecycle": "retired",
+          "approved": true,
+          "health_check": null,
+          "decision": "remove approval",
+          "next_action": "Have an organization owner deny this retired app and verify the new policy state."
+        },
+        {
+          "app_id": "sync-03",
+          "application": "Archive Bridge",
+          "ticket": "OAUTH-203",
+          "owner": null,
+          "review_team": "Organization Security",
+          "purpose": null,
+          "lifecycle": "unknown",
+          "approved": true,
+          "health_check": null,
+          "decision": "investigate owner",
+          "next_action": "Identify the business owner and dependency, then record a retain or retire decision."
+        }
+      ]
+    },
+    {
+      "as_of": "2026-01-12T11:00:00Z",
+      "window_start": "2026-01-12T10:45:00Z",
+      "evidence_ref": "ORG-REVIEW-1100",
+      "complete": true,
+      "restrictions_enabled": true,
+      "applications": [
+        {
+          "app_id": "build-01",
+          "application": "Build Courier",
+          "ticket": "OAUTH-201",
+          "owner": "Release Engineering",
+          "review_team": "Release Engineering",
+          "purpose": "Deliver build results for the private packaging repository.",
+          "lifecycle": "active",
+          "approved": true,
+          "health_check": {
+            "app_id": "build-01",
+            "checked_at": "2026-01-12T10:55:00Z",
+            "passed": true
+          },
+          "decision": "retain",
+          "next_action": "Keep the approval and file the successful build check with the owner's register entry."
+        },
+        {
+          "app_id": "reports-02",
+          "application": "Weekly Digest",
+          "ticket": "OAUTH-202",
+          "owner": "Developer Experience",
+          "review_team": "Developer Experience",
+          "purpose": "Previously compiled the weekly repository activity report.",
+          "lifecycle": "retired",
+          "approved": false,
+          "health_check": null,
+          "decision": "retirement verified",
+          "next_action": "File the dated organization denial as closure evidence."
+        },
+        {
+          "app_id": "sync-03",
+          "application": "Archive Bridge",
+          "ticket": "OAUTH-203",
+          "owner": null,
+          "review_team": "Organization Security",
+          "purpose": null,
+          "lifecycle": "unknown",
+          "approved": true,
+          "health_check": null,
+          "decision": "investigate owner",
+          "next_action": "Identify the business owner and dependency, then record a retain or retire decision."
+        }
+      ]
+    }
+  ]
+}

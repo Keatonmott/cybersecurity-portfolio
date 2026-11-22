@@ -1,4 +1,4 @@
-"""Build the five JSON reports from the local fixtures."""
+"""Build the portfolio's JSON reports from the local fixtures."""
 
 import json
 from pathlib import Path
@@ -6,6 +6,7 @@ from pathlib import Path
 from projects.ai_security.evaluate import CASES_PATH, evaluate
 from projects.cloud_security_lab.audit import audit
 from projects.cloud_security_lab.detect import detect, iter_events
+from projects.github_oauth import FIXTURE as OAUTH_FIXTURE, review as review_oauth
 from projects.secure_api.demo import access_matrix
 
 
@@ -34,7 +35,8 @@ def main():
     cases = json.loads(CASES_PATH.read_text(encoding="utf-8"))
     evaluations = [evaluate(cases, mode) for mode in ("baseline", "guarded")]
     write_json("ai-evaluation.json", {"evaluations": evaluations})
-    print("Wrote five JSON reports to evidence/.")
+    write_json("github-oauth-review.json", review_oauth(json.loads(OAUTH_FIXTURE.read_text(encoding="utf-8"))))
+    print("Wrote six JSON reports to evidence/.")
 
 
 if __name__ == "__main__":
